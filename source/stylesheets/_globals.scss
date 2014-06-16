@@ -1,0 +1,75 @@
+$red: #A12302;
+$medgrey: #D9D9D9;
+
+
+@mixin sans {
+  // univers55
+  font: normal 100% 'Univers LT W01 55 Roman', Verdana, sans-serif;
+}
+
+@mixin sansbold {
+  font: bold 100% Verdana, sans-serif;
+}
+/*
+font-family:'UniversLTW01-47LightCn';
+font-family:'Univers LT W01 55 Roman';
+font-family:'UniversLTW01-57Condense 723821';
+font-family:'Rotation LT W01 Italic';*/
+
+
+@mixin sanscondensed {
+  font: normal 100% 'UniversLTW01-57Condense 723821', Verdana, sans-serif;
+}
+
+
+@mixin sanslightcondensed {
+  font: normal 100% 'UniversLTW01-47LightCn', Verdana, sans-serif;
+}
+
+
+@mixin rotationitalic {
+  // rotationltdstd italic
+  font: normal 100% 'Rotation LT W01 Italic', Georgia, serif;
+}
+
+@mixin subtext {
+  // todo: univers55
+  font: normal 11px/16px 'Univers LT W01 55 Roman', Verdana, sans-serif;
+}
+
+@function pem($pxval, $base: $base-font-size) {
+  @return #{$pxval / $base}em;
+}
+
+// retina.scss
+// Defaults to png but can be overwritten to jpg or gif
+//$image name is equal to the image name with out it's extention - 'example.png' would be defined as 'example'
+// A helper mixin for applying high-resolution background images (http://www.retinajs.com)
+@mixin at2x($image_name, $w: auto, $h: auto, $extension: '.png') {
+  background-image: image_url($image_name + $extension);
+  $x2img : $image_name + '@2x' + $extension;
+
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 2) {
+    background-image: image_url($x2img);
+    background-size: $w $h;
+  }
+}
+
+@mixin sprite-background($name, $folder, $sprite-width) {
+  $sprites: sprite-map("#{$folder}/*.png");
+  $sprites-retina: sprite-map("#{$folder}@2x/*.png");
+
+  background-image: sprite-url($sprites);
+  background-position: sprite-position($sprites, $name);
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: image-height(sprite-file($sprites, $name));
+  width: image-width(sprite-file($sprites, $name));
+  @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 2) {
+    $ypos: round(nth(sprite-position($sprites-retina, $name), 2) / 2);
+    background-position: 0 $ypos;
+    // There must be a way of detecting this width.
+    @include background-size($sprite-width auto);
+    background-image: sprite-url($sprites-retina);
+  }
+}

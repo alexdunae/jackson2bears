@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <%= javascript_include_tag 'vendor/modernizr-2.5.3.min.js' %>
+  <title><%= escape_html(data.page.title || 'J2B') %></title>
+  <meta name="description" content="<%= escape_html(data.page.description) %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <script type="text/javascript" src="http://fast.fonts.com/jsapi/6554e2b6-bb38-4836-9221-f684a0f440fd.js"></script>
+  <%= stylesheet_link_tag "style", media: 'screen, handheld' %>
+  <%= stylesheet_link_tag "desktop", media: 'screen and (min-width: 45.5em)' %>
+  <!--[if (lt IE 9)&(!IEMobile)]>
+    <%= stylesheet_link_tag "desktop" %>
+  <![endif]-->
+  <meta property="og:title" content="<%= escape_html(data.page.title || 'J2B TODO') %>">
+  <meta property="og:description" content="<%= escape_html(data.page.description) %>" />
+</head>
+<body class="<%= page_classes %> preload">
+  <div class="full-image"><%= image_tag 'todo-fullwidth.jpg' %></div>
+  <div id="page" class='page-frame'>
+    <header class='header'>
+      <div class="logo"><a href=''>J2B</a></div>
+
+      <nav>
+        <ul>
+          <li><a href='#todo' data-category='performance'>Performance</a></li>
+          <li><a href='#todo' data-category='multimedia'>Multimedia</a></li>
+          <li><a href='#todo' data-category='video'>Video / Image</a></li>
+          <li><a href='#todo' data-category='collaborations'>Collaborations</a></li>
+          <li><a href='#todo' data-category='writing'>Writing</a></li>
+          <li><a href='#todo'>Bio</a></li>
+          <li><a href='#todo'>Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class='main'>
+      <article class='article' id='article'>
+        <div id='article-body'>
+          <%= yield %>
+        </div>
+      </article>
+    </div>
+
+    <nav class='toc'>
+      <% rand = Random.new %>
+      <% categories = %w{ performance multimedia video collaborations writing } %>
+      <% (1999..2012).to_a.reverse.each do |year| %>
+      <section class='year'>
+        <h4><%= year %></h4>
+        <ul>
+          <% rand(3..8).times do
+            title = lorem.words(rand(1..5)).titleize
+            if rand(0..1) == 1
+          %>
+            <li class="<%= categories.sample %>"><a href='/essay.html'><%= title %></a></li>
+          <% else %>
+            <li><%= title %></li>
+          <% end %>
+        <% end %>
+        </ul>
+      </section>
+      <% end %>
+    </nav>
+  </div>
+
+  <footer class='footer'>
+    <div class='page-frame'>
+      <form action='#todo' class='email-signup'>
+        <label for='email'>Enter your email to be added to the mailing list</label>
+        <input type='email' id='email' name='email'>
+        <button type='submit'>Sign up</button>
+        <p class='email-msg'>Here is the result message. It's todo, too.</p>
+      </form>
+
+      <section class='about'>
+        <p>Copyright 1999 - 2012 Jackson 2Bears. All Rights reserved.</p>
+        <p>Questions? <a href='mailto:todo@example.com'>Get in touch</a>.</p>
+      </section>
+
+      <a href='#page'><%= image_tag 'logo-footer@2x.png', :alt => 'J2B Logo', :width => 40, :height => 48 %></a>
+    </div>
+  </footer>
+
+
+   <%= javascript_include_tag 'all' %>
+  <script>
+    /* TODO
+    var _gaq=[['_setAccount','UA-10306926-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  */
+  </script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+@import "globals";
+$base-font-size: 16px;
+$base-line-height: 32px;
+
+@import "normalize";
+@import "h5bp";
+@import "compass/css3";
+@import "compass/typography/vertical_rhythm";
+@import "compass/utilities/general/clearfix";
+
+body {
+  position: relative;
+  @include sans;
+  color: black;
+}
+
+@include establish-baseline;
+
+
+.page-frame {
+  max-width: 928px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+
+///////////////////////////
+// TYPOGRAPHY AND GENERAL
+///////////////////////////
+h1, h2, h3 {
+  @include sanscondensed;
+}
+
+h1, h2, h3, p, li {line-height: 32px;}
+h1 {
+  margin: 0 0 32px;
+  font-size: 24px;
+}
+
+h1, h2 {
+  &, & a {color: $red;}
+}
+h2 {
+  margin: 16px 0 32px;
+  font-size: 16px;
+
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+
+a {
+  color: $red;
+}
+
+h3, p, li {
+  margin: 32px 0;
+  font-size: 14px;
+}
+
+
+h1 + h3 {
+  margin: 34px 0 30px;
+}
+
+
+
+article {
+  @include single-transition(all, 500ms, ease-out, 0);
+  ol, ul, li {margin: 0; padding: 0;}
+  ul, ol { margin-left: 1em;}
+  li {padding-left: 40px;}
+
+  blockquote {
+    overflow: hidden;
+    margin: 56px 0;
+    padding-left: 38px;
+    border: 2px solid $red;
+    border-width: 0 0 0 2px;
+    color: $red;
+
+    p {
+      font-size: 16px;
+    }
+
+    p:first-child {
+      margin-top: -8px;
+    }
+    p:last-child {
+      margin-bottom: -8px;
+    }
+  }
+}
+
+.note {
+   width: percentage(352/726);
+   margin: 56px 0;
+  @include subtext;
+}
+
+///////////////////////////
+// HEADER
+///////////////////////////
+.header {
+  @include clearfix;
+  padding: 48px 0 55px; // todo: pad-top is less when there is a header image
+  .logo {
+    float: left;
+    height: 80px;
+    width: percentage(96/928);
+    width: 96px;
+
+    a {
+      display: block;
+      width: 100%; height: 100%;
+      @include at2x('logo', 96px, 80px);
+      text-indent: -99999em;
+    }
+  }
+
+  nav {
+    //float: left;
+    margin-left: 96px;
+    padding-top: 64px;
+    //width: percentage(832/928);
+    @include sanscondensed;
+
+    &, li, a { font-size: 12px; line-height: 16px; }
+    &, & a { color: black; text-decoration: none; }
+
+    a {
+      display: block;
+      height: 16px;
+      padding-bottom: 8px;
+      padding-right: 24px;
+      &:hover, &:focus { color: $red; text-decoration: underline; }
+    }
+  }
+
+  ul, li { margin: 0; padding: 0; }
+  li { @include inline-block; }
+}
+
+
+///////////////////////////
+// ARTICLE
+///////////////////////////
+.main { border: 1px solid $medgrey; border-width: 1px 0; }
+.article {
+  overflow: auto;
+  margin: 88px 0 0;
+}
+
+
+///////////////////////////
+// HOMEPAGE
+///////////////////////////
+.index .article {
+  margin: 16px 0;
+}
+.home-summary {
+  overflow: auto;
+  &, p {
+    @include sanslightcondensed;
+    font-size: 24px;
+    line-height: 48px;
+  }
+
+  p { margin: 32px 16px; }
+}
+
+///////////////////////////
+// FULL WIDTH TOP IMAGE
+///////////////////////////
+.full-image {
+  display: none; // TODO
+  img {
+    display: block;
+    width: 100%;
+    height :auto;
+  }
+}
+
+
+
+///////////////////////////
+// INLINE MEDIA
+///////////////////////////
+.media {
+  img { display: block; height: auto; margin: 0 auto;}
+
+  p { margin: 16px auto; @include subtext; }
+}
+
+.media-left, .media-right, .media-wide {
+  clear: both;
+  width: 352px;
+  max-width: 352px;
+  margin: 8px 0 32px;
+  @include single-transition(width, 250ms, ease-out, 0);
+  img { width: 100%; }
+}
+
+
+.media-video {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  height: 0;
+  padding-bottom: percentage(9/16);
+  iframe, object {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.media-left {
+  float: left;
+  margin-right: 32px;
+}
+
+.media-right {
+  float: right;
+  margin-left: 32px;
+}
+
+@media all and (max-width: 719px) {
+  .media-left, .media-right {
+    width: 280px;
+  }
+}
+
+@media all and (max-width: 610px) {
+  .media-left, .media-right {
+    width: 240px;
+  }
+}
+
+@media all and (max-width: 520px) {
+  .media-left, .media-right {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+///////////////////////////
+// TOC
+///////////////////////////
+
+.toc {
+  //@include clearfix;
+  h4 {
+    margin: 0;
+    @include rotationitalic;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  ul, li {
+    margin: 0; padding: 0;
+  }
+
+  li {
+    margin: 16px 0;
+    @include sanscondensed;
+    font-size: 12px;
+    line-height: 16px;
+    color: #B3B3B3;
+    @include single-transition(opacity, 150ms, ease-out, 0);
+  }
+
+  li a {
+    color: black;
+    text-decoration: none;
+    &:hover, &:focus { color: $red; text-decoration: underline; }
+  }
+
+  margin: 32px -16px;
+  font-size: 0;
+
+  .year {
+    //float: left;
+    @include inline-block;
+    vertical-align: top;
+    width: 160px;
+    margin: 32px 16px;
+
+  }
+
+}
+
+///////////////////////////
+// FOOTER
+///////////////////////////
+.footer {
+  @include clearfix;
+  margin-top: 96px;
+  padding: 64px 0;
+  color: #fff;
+  background: black;
+
+  label, input, button {
+    display: block;
+    @include box-sizing(border-box);
+    @include sanscondensed;
+  }
+
+  label, .email-msg {
+    margin: -4px 0 12px;
+    @include sanscondensed;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  label, button, .email-msg {
+    text-transform: uppercase;
+  }
+
+
+  .email-signup, .about, .logo {
+    float: left;
+  }
+
+  .email-msg {
+    clear: both;
+    margin: 64px 0 0;
+  }
+
+
+  .email-signup {
+    width: percentage(352/928);
+
+    input, button {
+      float: left;
+      height: 32px;
+      border: 0;
+      line-height: 16px;
+    }
+
+    input {
+      width: percentage(272/352);
+      padding: 0 16px;
+      background: #E6E6E6;
+    }
+
+    button {
+      width: percentage(80/352);
+      border: 0;
+      font-size: 12px;
+      text-align: center;
+      color: #fff;
+      background-color: #262626;
+      //text-shadow: 1px 1px 2px rgba(0,0,0,.3);
+
+      &:hover, &:focus {
+        color: black;
+        background-color: $red;
+      }
+    }
+
+  }
+
+  .about {
+    width: percentage(256/928);
+    margin: 0 32px 0 128px;
+    p {
+      margin: 0 0 16px;
+      font-size: 11px;
+      line-height: 16px;
+    }
+
+    p:first-child {
+      margin-top: 4px;
+    }
+
+    p:last-child {
+      margin-bottom: -4px;
+    }
+  }
+
+}
+
+// prevent transitions firing on load
+// http://css-tricks.com/transitions-only-after-page-load/
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+
+///////////////////////////
+// DEBUG
+///////////////////////////
+
+
+.debug {
+  .page-frame {
+      background: rgba(255,255,255,1) image_url("grid.png") 0 0 repeat;
+    }
+
+  .header, footer, section, .toc .year {
+    //background: rgba(200,200,200,.4);
+    outline: 1px solid pink;
+  }
+
+  .header li, .toc .year {
+    background: rgba(255,0,0,0.2);
+  }
+  footer {
+    background: rgba(0,0,0,.2);
+  }
+}
+
+
+@import "helpers";
+
