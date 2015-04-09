@@ -1,0 +1,39 @@
+.site-footer {
+  @extend %clearfix;
+  padding: 56px 0;
+  color: #fff;
+  background: $black;
+}
+
+.footer-signup {
+  float: left;
+  width: 448px;
+  min-height: 48px;
+  background: rgba(#fff, 0.15);
+}
+
+.footer-legal {
+  float: right;
+  width: 288px;
+
+  font-size: 11px;
+  line-height: 16px;
+}
+
+
+//@include breakpoint(mobile) {
+@media all and (max-width: em(860px)) {
+  .site-footer {
+    padding: 0;
+
+    .content-container { margin: 0; }
+  }
+
+
+
+  .footer-signup, .footer-legal {
+    float: none;
+    width: auto;
+    margin: 24px 0;
+  }
+}

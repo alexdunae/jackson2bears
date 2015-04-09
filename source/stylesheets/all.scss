@@ -1,0 +1,33 @@
+@import "normalize";
+@import "fonts";
+@import "globals";
+@import "grid";
+@import "typography";
+@import "header";
+@import "footer";
+@import "works";
+@import "toc";
+
+.wide-image {
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.flow-2col {
+  -webkit-columns: 2 400px;
+  -moz-columns: 2 400px;
+  columns: 2 400px;
+  -webkit-column-gap: 32px;
+  -moz-column-gap: 32px;
+  column-gap: 32px;
+
+  p:first-child { margin-top: 0; }
+}
+
+
+.questions-cta {
+  p { @extend %h3; }
+}

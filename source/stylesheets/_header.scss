@@ -1,0 +1,53 @@
+.site-header {
+  min-height: 72px;
+  padding-top: (144px - 80px);
+  @include sans-cnd(15px, 16px);
+
+  .logo, .site-nav, a {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  .logo {
+    width: 54px;
+    height: 72px;
+    margin-right: 20px;
+    background: transparent image_url('j2b.svg') no-repeat;
+    background-size: 54px 72px;
+
+  }
+}
+
+.site-nav {
+  a {
+    padding: 0 20px;
+    color: $black;
+  }
+}
+
+
+@include breakpoint(tablet) {
+  .site-header {
+    padding-top: 0;
+  }
+}
+
+@include breakpoint(mobile) {
+  .site-header {
+    font-size: 13px;
+    .logo {
+      display: block;
+      float: left;
+      width: 40px;
+      height: 52px;
+      background-size: cover;
+    }
+
+    .site-nav {
+      display: block;
+      margin-left: 40px;
+
+      .row { display: block; padding: 4px; }
+    }
+  }
+}

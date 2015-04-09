@@ -1,9 +1,0 @@
-User-agent: *
-Disallow: /inc/
-Disallow: /lib/
-Disallow: /forms/
-Disallow: /tmp/
-Disallow: /images/design/
-Disallow: /stylesheets/
-Disallow: /javascripts/
-Disallow: /proofs/

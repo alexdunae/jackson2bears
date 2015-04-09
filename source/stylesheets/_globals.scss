@@ -1,75 +1,78 @@
+$base-font-size: 16px; // for EMs
+
+$red-dark: #730C00;
 $red: #A12302;
-$medgrey: #D9D9D9;
+$black: #000;
+$border: #D9D9D9;
+
+// FONTS.COM weights
+// Univers W01    49 Light Condensed Ultra        200
+// Univers W01    47 Condensed Light              300
+// Univers W01    57 Condensed                    400
 
 
-@mixin sans {
-  // univers55
-  font: normal 100% 'Univers LT W01 55 Roman', Verdana, sans-serif;
+@mixin sans-light-cnd-ultra($size: 100%, $line-height: 1) {
+  font: 200 normal $size/#{$line-height} 'Univers W01', helvetica, arial, sans-serif;
 }
 
-@mixin sansbold {
-  font: bold 100% Verdana, sans-serif;
-}
-/*
-font-family:'UniversLTW01-47LightCn';
-font-family:'Univers LT W01 55 Roman';
-font-family:'UniversLTW01-57Condense 723821';
-font-family:'Rotation LT W01 Italic';*/
-
-
-@mixin sanscondensed {
-  font: normal 100% 'UniversLTW01-57Condense 723821', Verdana, sans-serif;
+@mixin sans-light-cnd($size: 100%, $line-height: 1) {
+  font: 300 normal $size/#{$line-height} 'Univers W01', helvetica, arial, sans-serif;
 }
 
-
-@mixin sanslightcondensed {
-  font: normal 100% 'UniversLTW01-47LightCn', Verdana, sans-serif;
+@mixin sans-cnd($size: 100%, $line-height: 1) {
+  font: 400 normal $size/#{$line-height} 'Univers W01', helvetica, arial, sans-serif;
 }
 
-
-@mixin rotationitalic {
-  // rotationltdstd italic
-  font: normal 100% 'Rotation LT W01 Italic', Georgia, serif;
-}
-
-@mixin subtext {
-  // todo: univers55
-  font: normal 11px/16px 'Univers LT W01 55 Roman', Verdana, sans-serif;
-}
-
-@function pem($pxval, $base: $base-font-size) {
-  @return #{$pxval / $base}em;
-}
-
-// retina.scss
-// Defaults to png but can be overwritten to jpg or gif
-//$image name is equal to the image name with out it's extention - 'example.png' would be defined as 'example'
-// A helper mixin for applying high-resolution background images (http://www.retinajs.com)
-@mixin at2x($image_name, $w: auto, $h: auto, $extension: '.png') {
-  background-image: image_url($image_name + $extension);
-  $x2img : $image_name + '@2x' + $extension;
-
-  @media all and (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 2) {
-    background-image: image_url($x2img);
-    background-size: $w $h;
+@mixin breakpoint($point) {
+  @if $point == tablet {
+    @media all and (max-width: em(1024px)) { @content; }
+  }
+  @else if $point == mobile {
+    @media all and (max-width: em(700px)) { @content; }
+  }
+  @else if $point == mobile-portrait {
+    @media all and (max-width: em(400px)) { @content; }
   }
 }
 
-@mixin sprite-background($name, $folder, $sprite-width) {
-  $sprites: sprite-map("#{$folder}/*.png");
-  $sprites-retina: sprite-map("#{$folder}@2x/*.png");
+@function em($px, $base: $base-font-size) {
+  @return ($px / $base) * 1em;
+}
 
-  background-image: sprite-url($sprites);
-  background-position: sprite-position($sprites, $name);
-  background-repeat: no-repeat;
-  display: inline-block;
-  height: image-height(sprite-file($sprites, $name));
-  width: image-width(sprite-file($sprites, $name));
-  @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 2) {
-    $ypos: round(nth(sprite-position($sprites-retina, $name), 2) / 2);
-    background-position: 0 $ypos;
-    // There must be a way of detecting this width.
-    @include background-size($sprite-width auto);
-    background-image: sprite-url($sprites-retina);
+%clearfix {
+  &:before, &:after { display: table; content: ""; }
+  &:after { clear: both; }
+  *zoom: 1;
+}
+
+%visuallyhidden {
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+%visuallyhidden-focusable {
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  position: absolute;
+
+  &:active, &:focus {
+    clip: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
   }
 }
+

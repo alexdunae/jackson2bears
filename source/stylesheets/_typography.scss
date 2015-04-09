@@ -1,0 +1,71 @@
+%h1 {
+  margin: 16px 0;
+  @include sans-light-cnd-ultra(48px, 1);
+  text-transform: uppercase;
+
+  @include breakpoint(mobile) {
+    font-size: 24px;
+  }
+}
+
+%h2 {
+  margin: 16px 0;
+  @include sans-light-cnd-ultra(160px, 1);
+
+  @include breakpoint(mobile) {
+    font-size: 60px;
+  }
+}
+
+%h3 {
+  margin: 16px 0;
+  @include sans-light-cnd(30px, 42px);
+
+  @include breakpoint(mobile) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+%details {
+  @include sans-cnd(14px, 22px);
+  font-style: italic;
+
+  @include breakpoint(mobile) {
+    line-height: 20px;
+  }
+}
+
+body {
+  @include sans-cnd(16px, 24px);
+}
+
+p {
+  margin: 16px 0;
+  font-size: 19px;
+  line-height: 26px;
+}
+
+a {
+  color: $red;
+  text-decoration: none;
+}
+
+.h3 { @extend %h3; }
+
+
+.home-intro p {
+  @extend %h1;
+}
+
+.p2 p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@include breakpoint(mobile) {
+  p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

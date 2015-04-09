@@ -1,0 +1,39 @@
+!!!
+%html
+  %head
+    %title= current_page.data.title || 'Jackson 2bears'
+    = stylesheet_link_tag 'all'
+
+  %body{class: page_classes}
+    %header.site-header
+      .content-container
+        .logo= # image_tag 'logo.svg', alt: 'J2B'
+        %nav.site-nav
+          %span.row
+            = link_to 'Home', '/'
+            = link_to 'Performance', '/works/performance.html'
+            = link_to 'Installation', '/works/performance.html'
+          %span.row
+            = link_to 'Video / Film', '/works/performance.html'
+            = link_to 'Writings', '/works/performance.html'
+            = link_to 'Contact', '#'
+
+    = yield
+
+    %section.questions-cta
+      .content-container
+        %p
+          Questions?
+          = link_to 'Get in touch.', '/contact'
+
+    %footer.site-footer
+      .content-container
+        %section.footer-signup
+
+        %section.footer-legal
+          Copyright 1999 –
+          = DateTime.now.year
+          Jackson 2bears.
+          All rights reserved.
+
+  = javascript_include_tag 'all'

@@ -1,0 +1,32 @@
+.content-container {
+  max-width: 928px;
+  margin: 80px auto;
+  padding: 0 40px;
+}
+
+.page-content {
+  padding-bottom: (80px - 16px);
+  border-bottom: 1px solid $border;
+}
+
+@include breakpoint(tablet) {
+  .content-container {
+    margin: 64px auto;
+  }
+
+  .page-content {
+    padding-bottom: (64px - 16px);
+  }
+}
+
+
+@include breakpoint(mobile) {
+  .content-container {
+    margin: 24px auto;
+    padding: 0 32px;
+  }
+
+  .page-content {
+    padding-bottom: (24px - 16px);
+  }
+}

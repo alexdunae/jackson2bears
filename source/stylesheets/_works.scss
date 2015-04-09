@@ -1,0 +1,46 @@
+.work-details {
+  p {
+    @extend %details;
+  }
+}
+
+.work-type {
+  @extend %h1;
+  margin: 0;
+}
+
+.work-title {
+  @extend %h2;
+  margin: 0;
+}
+
+.work-content {
+  position: relative;
+  padding-right: percentage(480/928);
+}
+
+.work-embed {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: percentage(448/928);
+
+  img, object, embed, iframe {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@include breakpoint(mobile) {
+  .work-content {
+    max-width: em(448px);
+    padding: 0;
+  }
+
+  .work-embed {
+    position: relative;
+    width: 100%;
+    margin: 24px 0;
+  }
+}
