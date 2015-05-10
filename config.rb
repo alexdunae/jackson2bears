@@ -72,14 +72,14 @@ configure :build do
   activate :minify_javascript
   activate :asset_hash
   activate :automatic_image_sizes
-  set :http_prefix, '/vjs/'
+  set :http_prefix, '/j2b/'
 end
 
 activate :deploy do |deploy|
   deploy.build_before = true
   deploy.method = :rsync
   deploy.host   = 'dialect.ca'
-  deploy.path   = '/home/dialect/clients.dialect.ca/vjs'
+  deploy.path   = '/home/dialect/clients.dialect.ca/j2b'
   deploy.user  = 'dialect'
   deploy.clean = true
 end
