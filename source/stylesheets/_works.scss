@@ -1,6 +1,7 @@
 .work-details {
   p {
     @extend %details;
+    margin: 6px 0;
   }
 }
 
