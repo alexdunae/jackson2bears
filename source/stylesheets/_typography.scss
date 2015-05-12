@@ -1,7 +1,7 @@
 %h1 {
   margin: 16px 0;
   @include sans-light-cnd-ultra(48px, 1);
-  text-transform: none;
+  text-transform: uppercase;
 
   @include breakpoint(mobile) {
     font-size: 24px;
@@ -10,7 +10,7 @@
 
 %h2 {
   margin: 16px 0;
-  @include sans-light-cnd-ultra(120px, 1);
+  @include sans-light-cnd-ultra(132px, 1);
 
   @include breakpoint(mobile) {
     font-size: 60px;
@@ -55,7 +55,9 @@ a {
 
 
 .home-intro p {
-  @extend %h1;
+  @include sans-light-cnd-ultra(48px, 1);
+  text-transform: lowercase;
+
 }
 
 .p2 p {
