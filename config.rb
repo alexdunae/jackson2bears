@@ -1,32 +1,24 @@
 J2B_WORKS = {
   performance: [
     {
-      title: 'Kaie:ri Nikawera:ke (The Four Corners of the Earth)',
+      title: 'Iron Tomahawks',
       description: 'In condimentum orci id nisl volutpat bibendum.',
       thumbnail: 'placeholder-x.png',
-      url: '/works/kaie:ri-nikawera:ke.html'
+      url: '/works/iron-tomahawks.html'
     },
     {
-      title: 'Kaie:ri Nikawera:ke (Some other show)',
+      title: 'Heritage Mythologies',
       description: 'In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis.',
       thumbnail: 'placeholder-x.png',
-      url: '/works/kaie:ri-nikawera:ke.html'
+      url: '/works/heritage-mythologies.html'
     },
     {
-      title: 'Kaie:ri Nikawera:ke (Some other show)',
+      title: 'Conjuration of Joseph Brant ',
       description: 'In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis.',
       thumbnail: 'placeholder-x.png',
-      url: '/works/kaie:ri-nikawera:ke.html'
-    },
-    {
-      title: 'Kaie:ri Nikawera:ke (Some other show)',
-      description: 'In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis.',
-      thumbnail: 'placeholder-x.png',
-      url: '/works/kaie:ri-nikawera:ke.html'
+      url: '/works/conjuration-of-joseph-brant.html'
     }
   ]
-
-
 
 
 }
