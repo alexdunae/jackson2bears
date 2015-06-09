@@ -35,6 +35,8 @@ Start the development server:
 
 Edit away. Everything that will typically need editing is in the `source` directory.
 
+For the `Work` sections, edit the `sitemap.yml` file in the project root directory.
+
 Preview the site at [http://localhost:4567/](http://localhost:4567/). Press `Ctrl + C` in the Terminal to stop the server.
 
 Save your changes to your local Git repository:

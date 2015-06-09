@@ -1,0 +1,73 @@
+performance:
+  - title: Iron Tomahawks
+    description: In condimentum orci id nisl volutpat bibendum.
+    thumbnail: placeholder-x.png
+    url: /works/iron-tomahawks.html
+
+  - title: Heritage Mythologies
+    description: In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis.
+    thumbnail: placeholder-x.png
+    url: /works/heritage-mythologies.html
+
+  - title: Conjuration of Joseph Brant 
+    description: In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis.
+    thumbnail: placeholder-x.png
+    url: /works/conjuration-of-joseph-brant.html
+
+writings:
+  - title: A Conversation with Spirits Inside the Simulation of a Coast Salish Longhouse
+    description: In condimentum orci id nisl volutpat bibendum.
+    thumbnail: placeholder-x.png
+    url: /works/a-conversation-with-spirits-inside-the-simulation-of-a-coast-salish-longhouse.html
+
+  - title: Coded Territories
+    description: In condimentum orci id nisl volutpat bibendum.
+    thumbnail: placeholder-x.png
+    url: /works/a-conversation-with-spirits-inside-the-simulation-of-a-coast-salish-longhouse.html
+
+  - title: Live Audio + Visual Art and First Nations Culture
+    description: In condimentum orci id nisl volutpat bibendum.
+    thumbnail: placeholder-x.png
+    url: /works/live-audio-and-visual-art-and-first-nations-culture.html
+
+  - title: 'Mythologies of an [Un]Dead Indian'
+    description: In condimentum orci id nisl volutpat bibendum.
+    thumbnail: placeholder-x.png
+    url: /works/mythologies-of-an-undead-indian.html
+
+film:
+  - title: After the Drones 
+    description: In condimentum orci id nisl volutpat bibendum.
+    thumbnail: placeholder-x.png
+    url: /works/after-the-drones.html
+
+  - title: Forever
+    description: In condimentum orci id nisl volutpat bibendum.
+    thumbnail: placeholder-x.png
+    url: /works/forever.html
+
+  - title: NDN’s on the Airwaves
+    description: In condimentum orci id nisl volutpat bibendum.
+    thumbnail: placeholder-x.png
+    url: /works/ndns-on-the-airwaves.html
+
+installation:
+  - title: Drifting; Almost Invisible
+    description: In condimentum orci id nisl volutpat bibendum.
+    thumbnail: placeholder-x.png
+    url: /works/drifting-almost-invisible.html
+
+  - title: Kaie:ri Nikawera:ke
+    description: In condimentum orci id nisl volutpat bibendum.
+    thumbnail: placeholder-x.png
+    url: '/works/kaie:ri-nikawera:ke.html'
+
+  - title: The Stand-Off
+    description: In condimentum orci id nisl volutpat bibendum.
+    thumbnail: placeholder-x.png
+    url: /works/the-stand-off.html
+
+  - title: This is not an Indian
+    description: In condimentum orci id nisl volutpat bibendum.
+    thumbnail: placeholder-x.png
+    url: /works/this-is-not-an-indian.html

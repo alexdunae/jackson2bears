@@ -1,31 +1,12 @@
-J2B_WORKS = {
-  performance: [
-    {
-      title: 'Iron Tomahawks',
-      description: 'In condimentum orci id nisl volutpat bibendum.',
-      thumbnail: 'placeholder-x.png',
-      url: '/works/iron-tomahawks.html'
-    },
-    {
-      title: 'Heritage Mythologies',
-      description: 'In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis.',
-      thumbnail: 'placeholder-x.png',
-      url: '/works/heritage-mythologies.html'
-    },
-    {
-      title: 'Conjuration of Joseph Brant ',
-      description: 'In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis.',
-      thumbnail: 'placeholder-x.png',
-      url: '/works/conjuration-of-joseph-brant.html'
-    }
-  ]
+require 'yaml'
+sitemap = File.expand_path(File.dirname(__FILE__) + '/sitemap.yml')
 
-
-}
+J2B_WORKS = YAML.load_file(sitemap)
+puts J2B_WORKS.inspect
 
 helpers do
   def toc(section)
-    works = J2B_WORKS.fetch(section)
+    works = J2B_WORKS.fetch(section.to_s)
 
     works.map do |work|
       toc_item(work)
@@ -34,14 +15,14 @@ helpers do
   end
 
   def toc_item(item)
-    style = bg_image(item[:thumbnail])
+    style = bg_image(item['thumbnail'])
 
-    label = "<h3 class='toc-title'>#{item[:title]}</h3>"
-    label << "<p class='toc-description'>#{item[:description]}</p>"
+    label = "<h3 class='toc-title'>#{item['title']}</h3>"
+    label << "<p class='toc-description'>#{item['description']}</p>"
 
 
     content_tag(:li, class: 'toc-item', style: style) do
-      link_to label.html_safe, item[:url], class: 'toc-item-inner'
+      link_to label.html_safe, item['url'], class: 'toc-item-inner'
     end
   end
 
