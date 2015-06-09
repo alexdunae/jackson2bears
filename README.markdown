@@ -1,22 +1,5 @@
 # J2B
 
-
-## Inline media
-
-Media can be embeded inline:
-
-	<div class='media media-left'>
-		<%= image_tag 'http://placehold.it/352x336' %>
-		<p>Optional cutline dolor sit amet, consectetuer adipiscing elit.</p>
-	</div>
-
-	<div class='media media-right'>
-		<%= image_tag 'http://placehold.it/352x336' %>
-		<p>Optional cutline dolor sit amet, consectetuer adipiscing elit.</p>
-	</div>
-
-Left and right-aligned media files must be at least 352px wide.  TODO: retina.
-
 ## Development
 
 In terminal, get to the proper directory.
