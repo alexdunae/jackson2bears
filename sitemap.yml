@@ -14,6 +14,11 @@ performance:
     thumbnail: placeholder-x.png
     url: /works/conjuration-of-joseph-brant.html
 
+  - title: Red Visions Instruments
+    description: In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis.
+    thumbnail: placeholder-x.png
+    url: /works/red-visions-instruments.html
+
 writings:
   - title: A Conversation with Spirits Inside the Simulation of a Coast Salish Longhouse
     description: In condimentum orci id nisl volutpat bibendum.
