@@ -1,21 +1,28 @@
 .toc {
   @extend %clearfix;
+  width: 100%;
 }
 
-.toc-item {
+.toc-item-frame {
   float: left;
-  display: table;
   width: percentage(448/928);
   height: 270px;
   margin: 0 percentage(32/928) percentage(32/928) 0;
-  background: $black none 50% 50%;
-  backgroud-size: cover;
-
-  &, & a { color: #fff; }
+  list-style: none;
 
   &:nth-child(even) {
     margin-right: 0;
   }
+}
+
+.toc-item {
+  display: table;
+  width: 100%;
+  height: 270px;
+  background: $black none 50% 50%;
+  backgroud-size: cover;
+
+  &, & a { color: #fff; }
 }
 
 .toc-item-inner {
@@ -35,7 +42,7 @@
 }
 
 @include breakpoint(mobile) {
-  .toc-item {
+  .toc-item-frame {
     float: none;
     width: 100%;
     margin: 32px 0;

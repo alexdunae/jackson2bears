@@ -21,8 +21,10 @@ helpers do
     label << "<p class='toc-description'>#{item['description']}</p>"
 
 
-    content_tag(:li, class: 'toc-item', style: style) do
-      link_to label.html_safe, item['url'], class: 'toc-item-inner'
+    content_tag(:li, class: 'toc-item-frame') do
+      content_tag(:div, class: 'toc-item', style: style) do
+        link_to label.html_safe, item['url'], class: 'toc-item-inner'
+      end
     end
   end
 
