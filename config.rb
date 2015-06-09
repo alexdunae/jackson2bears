@@ -2,7 +2,6 @@ require 'yaml'
 sitemap = File.expand_path(File.dirname(__FILE__) + '/sitemap.yml')
 
 J2B_WORKS = YAML.load_file(sitemap)
-puts J2B_WORKS.inspect
 
 helpers do
   def toc(section)
