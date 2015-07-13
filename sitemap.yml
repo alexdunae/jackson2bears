@@ -1,22 +1,22 @@
 performance:
   - title: Iron Tomahawks
     description:
-    thumbnail: placeholder-x.png
+    thumbnail: toc-tomahawks.png
     url: /works/iron-tomahawks.html
 
   - title: Heritage Mythologies
     description:
-    thumbnail: placeholder-x.png
+    thumbnail: toc-mythologies.png
     url: /works/heritage-mythologies.html
 
   - title: Conjuration of Joseph Brant
     description:
-    thumbnail: placeholder-x.png
+    thumbnail: toc-conjuration.png
     url: /works/conjuration-of-joseph-brant.html
 
   - title: Red Visions Instruments
     description:
-    thumbnail: placeholder-x.png
+    thumbnail: toc-red-vision.png
     url: /works/red-visions-instruments.html
 
 writings:
@@ -43,33 +43,33 @@ writings:
 film:
   - title: After the Drones
     description:
-    thumbnail: placeholder-x.png
+    thumbnail: toc-drones.png
     url: /works/after-the-drones.html
 
   - title: Forever
     description:
-    thumbnail: placeholder-x.png
+    thumbnail: toc-forever.png
     url: /works/forever.html
 
-  - title: NDN's on the Airwaves
+  - title: NDNs on the Airwaves
     description:
-    thumbnail: placeholder-x.png
+    thumbnail: toc-airwaves.png
     url: /works/ndns-on-the-airwaves.html
 
 installation:
   - title: Drifting; Almost Invisible
     description:
-    thumbnail: placeholder-x.png
+    thumbnail: toc-drifting.png
     url: /works/drifting-almost-invisible.html
 
   - title: Kaie:ri Nikawera:ke
     description:
-    thumbnail: placeholder-x.png
+    thumbnail: toc-kaie_ri.png
     url: '/works/kaie:ri-nikawera:ke.html'
 
   - title: The Stand-Off
     description:
-    thumbnail: placeholder-x.png
+    thumbnail: toc-standoff.png
     url: /works/the-stand-off.html
 
   - title: This is not an Indian
