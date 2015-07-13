@@ -9,7 +9,7 @@ performance:
     thumbnail: placeholder-x.png
     url: /works/heritage-mythologies.html
 
-  - title: Conjuration of Joseph Brant 
+  - title: Conjuration of Joseph Brant
     description:
     thumbnail: placeholder-x.png
     url: /works/conjuration-of-joseph-brant.html
@@ -41,7 +41,7 @@ writings:
     url: /works/mythologies-of-an-undead-indian.html
 
 film:
-  - title: After the Drones 
+  - title: After the Drones
     description:
     thumbnail: placeholder-x.png
     url: /works/after-the-drones.html
@@ -51,7 +51,7 @@ film:
     thumbnail: placeholder-x.png
     url: /works/forever.html
 
-  - title: NDN’s on the Airwaves
+  - title: NDN's on the Airwaves
     description:
     thumbnail: placeholder-x.png
     url: /works/ndns-on-the-airwaves.html
