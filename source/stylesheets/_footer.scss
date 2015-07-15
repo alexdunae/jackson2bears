@@ -3,37 +3,124 @@
   padding: 56px 0;
   color: #fff;
   background: $black;
+
+  .content-container {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+.footer-logo {
+  display: block;
+  float: left;
+  width: 36px;
+  height: 48px;
+  margin-right: 24px;
+  color: #fff;
+  background: transparent image_url('j2b-white.svg') no-repeat;
+  background-size: 36px 48px;
 }
 
 .footer-signup {
   float: left;
-  width: 448px;
+  width: 352px;
   min-height: 48px;
-  background: rgba(#fff, 0.15);
+
+  .controls {
+    @extend %clearfix;
+    max-width: 100%;
+  }
+
+  input, button {
+    margin: 0;
+    height: 48px;
+    display: block;
+    float: left;
+    line-height: 24px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    box-sizing: border-box;
+  }
+
+  input {
+    width: 256px;
+    padding: 0 0.75em;
+    @include sans-light-cnd(16px, 24px);
+    background: #fff;
+    border: 1px solid $black;
+    border-right: 0;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+
+  button {
+    margin-left: -1px;
+    width: (352px - 256px);
+    border: 1px solid $black;
+//    border: 0;
+    @include sans-cnd(12px, 22px);
+    text-transform: uppercase;
+    color: #fff;
+    background: $red;
+    transition: all 100ms ease;
+    -webkit-appearance: none;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      background: lighten($red, 5%);
+    }
+
+    &:active {
+      background: lighten($red, 10%);
+    }
+  }
 }
 
 .footer-legal {
+  min-height: 48px;
   float: right;
   width: 288px;
-
+  padding: 16px 0;
   font-size: 11px;
   line-height: 16px;
 }
 
+.footer-skip-link {
+  display: none;
+}
 
-//@include breakpoint(mobile) {
-@media all and (max-width: em(860px)) {
+
+@media all and (max-width: em(790px)) {
   .site-footer {
     padding: 0;
-
     .content-container { margin: 0; }
   }
 
+  .footer-logo {
+    min-height: 0;
+    display: none;
+  }
 
-
-  .footer-signup, .footer-legal {
+  .footer-signup, .footer-legal, .footer-skip-link {
     float: none;
     width: auto;
     margin: 24px 0;
+    padding: 0;
+    min-height: 0;
+  }
+
+  .footer-skip-link {
+    display: block;
+    font-size: 11px;
+    line-height: 16px;
+    color: $red-bright;
+  }
+}
+
+@media all and (max-width: em(420px)) {
+  .footer-signup {
+    width: 100%;
+    input { width: 60%; }
+    button { width: 40%; }
   }
 }

@@ -1,0 +1,91 @@
+
+.widget-subscribe {
+  max-width: 612px;
+  margin: 0 auto 96px;
+  label {
+    display: block;
+    margin: 0 0 18px;
+    @include proxima-semibold(15px, 24px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+  }
+
+  .controls {
+    @extend %clearfix;
+    max-width: 612px;
+  }
+
+  input, button {
+    margin: 0;
+    height: 54px;
+    display: block;
+    float: left;
+    line-height: 24px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    box-sizing: border-box;
+  }
+
+  input {
+    width: 75%;
+    padding: 0 0.75em;
+    font-size: 14px;
+    color: $body;
+    background: #fff;
+    border: 1px solid #DDDEDF;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+
+  button {
+    width: 25%;
+    border: 0;
+    -webkit-appearance: none;
+    cursor: pointer;
+
+    border: 1px solid $purple-medium;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @include proxima-semibold(12px, 24px);
+    color: #fff;
+    background: $purple-medium;
+    transition: all 100ms ease;
+
+    &:hover, &:focus {
+      // color: $purple-medium;
+      background: lighten($purple-medium, 5%);
+      border-color: lighten($purple-medium, 5%);
+    }
+  }
+
+  @include breakpoint(mobile) {
+    margin-bottom: 36px;
+    label {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    input, button {
+      height: 42px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    input {
+      width: 60%;
+    }
+
+    button { width: 40%; font-size: 10px; }
+  }
+}
+
+
+.home-body {
+  .widget-subscribe {
+    clear: both;
+    margin: 0 auto;
+    label { color: $body; }
+  }
+}

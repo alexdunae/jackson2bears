@@ -6,7 +6,7 @@
     = stylesheet_link_tag 'all'
 
   %body{class: page_classes}
-    %header.site-header
+    %header.site-header#top
       .content-container
         .logo= # image_tag 'logo.svg', alt: 'J2B'
         %nav.site-nav
@@ -29,12 +29,24 @@
 
     %footer.site-footer
       .content-container
+        %a.footer-logo{href: '#top'}
         %section.footer-signup
+
+          %form{action: 'http://cvcda.us9.list-manage1.com/subscribe/post', method: 'post'}
+            %input{type: 'hidden', name: 'u', value: 'TODO-7d66656754a3e06953fb65433'}
+            %input{type: 'hidden', name: 'id', value: 'TODO-1e7915f845'}
+
+            .controls
+              %input{type: 'email', autocapitalize: 'off', autocorrect: 'off', name: 'EMAIL', id: 'EMAIL', placeholder: 'Enter your email to sign up for updates', required: true, aria: {controls:'subscribe-note'}}
+              %button{type: 'submit'} Subscribe
+            #footer-signup-message{aria: {live: 'assertive', atomic: 'true'}}
 
         %section.footer-legal
           Copyright 1999 –
           = DateTime.now.year
           Jackson 2bears.
           All rights reserved.
+
+        %a.footer-skip-link{href: '#top'} Back to top
 
   = javascript_include_tag 'all'
