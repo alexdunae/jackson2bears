@@ -14,10 +14,10 @@ performance:
     thumbnail: toc-conjuration.png
     url: /works/conjuration-of-joseph-brant.html
 
-  - title: Red Visions Instruments
-    description:
-    thumbnail: toc-red-vision.png
-    url: /works/red-visions.html
+  # - title: Red Visions Instruments
+  #   description:
+  #   thumbnail: toc-red-vision.png
+  #   url: /works/red-visions.html
 
 writings:
   - title: A Conversation with Spirits Inside the Simulation of a Coast Salish Longhouse
@@ -57,6 +57,11 @@ film:
     url: /works/ndns-on-the-airwaves.html
 
 installation:
+  - title: For this Land
+    description:
+    thumbnail: toc-for-this-land.png
+    url: /works/for-this-land.html
+
   - title: Drifting; Almost Invisible
     description:
     thumbnail: toc-drifting.png
@@ -72,7 +77,3 @@ installation:
     thumbnail: toc-standoff.png
     url: /works/the-stand-off.html
 
-  - title: This is not an Indian
-    description:
-    thumbnail: placeholder-x.png
-    url: /works/this-is-not-an-indian.html
