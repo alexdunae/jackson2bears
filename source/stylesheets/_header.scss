@@ -1,7 +1,7 @@
 .site-header {
   min-height: 72px;
   padding-top: (144px - 80px);
-  @include sans-cnd(15px, 16px);
+  @include sans-cnd(18px, 18px);
 
   .logo, .site-nav, a {
     display: inline-block;
@@ -20,7 +20,7 @@
 
 .site-nav {
   a {
-    padding: 0 20px;
+    padding: 0 16px;
     color: $black;
   }
 }
@@ -34,7 +34,7 @@
 
 @include breakpoint(mobile) {
   .site-header {
-    font-size: 13px;
+    font-size: 16px;
     .logo {
       display: block;
       float: left;
@@ -47,7 +47,7 @@
       display: block;
       margin-left: 40px;
 
-      .row { display: block; padding: 4px; }
+      .row { display: block; padding: 6px; }
     }
   }
 }
